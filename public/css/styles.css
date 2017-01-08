@@ -1,14 +1,111 @@
-#message-form label,
-#message-form button,
-#send-location{
-  display:block;
-  text-align:center;
-  line-height: 120%;
-  font-size: .9em;
-  text-transform: uppercase;
+*{
+  box-sizing: border-box;
 }
+
+div.col-md-2{
+  height: 100vh;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-md-2{
+  color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+#send-location,
+#send-message{
+  display: inline-block;
+  width: 15%;
+}
+
+input[name="message"]{
+  width: 68%;
+}
+
+#message-form{
+  width: 98%;
+  margin: 0 auto;
+  background: #fefefe;
+  position: absolute;
+  bottom: 20px;
+}
+
+#send-location{
+  width: 15%;
+  position: absolute;
+  bottom: 35px;
+  margin-left: 82%;
+}
+
+#messages.well{
+  padding: 30px;
+  width: 100%;
+  margin: 0 auto;
+  color: #00134d;
+}
+
+#left-panel{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+  background: #1e5799; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
 
 #message-form button,
 #send-location{
-  border-radius: 30px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: .8em;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+  .col-md-2{
+    height: auto !important;
+  }
+  .row{
+    display:block;
+  }
+
+
+  #send-message{
+    display: block;
+    width: 250px;
+    margin: 25px 15px;
+    text-align: center;
+  }
+
+  #send-location{
+    display: block;
+    width: 250px;
+    margin:10px 15px;
+  }
+
+  input[name="message"]{
+    width: 100%;
+    background: #fefefe;
+    padding: 5px;
+  }
+  #message-form{
+    width: 100%;
+    margin: 20px auto;
+    background: #fefefe;
+    display:block;
+    position: relative;
+  }
 }

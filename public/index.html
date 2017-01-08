@@ -8,25 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+  <div class="container-fluid">
+    <div class="row row-eq-height">
+      <div class="col-md-2 " id="left-panel">
+        <h3>People</h3>
+      </div>
+      <div class="col-md-10">
         <h1 class="text-center">Welcome to the Node Chat App</h1>
         <h3 class="text-center">This is the demo project with Socket.io</h4>
-        <ol id="messages"></ol>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+        <ol id="messages" class="well"></ol>
         <form id="message-form">
           <div class="form-group">
-            <label for="message"><h4 class="text-center">What's Your Message?</h4></label>
-            <textarea rows="10" name="message" placeholder="Type here...." type="text" class="form-control" ></textarea>
+            <label for="message"><h4>What's Your Message?</h4></label>
             <br/>
-            <button type="submit" class="center-block btn btn-info">Send</button>
-          </div>
+            <input type="text" name="message" autofocus autocomplete="off"placeholder="Type here...." type="text" ></input>
+            <button id="send-message" type="submit" class="btn btn-sm btn-info">Send</button>
+            </div>
         </form>
-        <button id="send-location" type="submit" class="center-block btn btn-primary">Send Location</button>
+            <button id="send-location" type="submit" class="btn btn-sm btn-primary">Send Location</button>
       </div>
     </div>
   </div>
