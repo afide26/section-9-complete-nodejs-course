@@ -15,9 +15,9 @@
       </div>
       <div class="col-md-10">
         <h1 class="text-center">Welcome to the Node Chat App</h1>
-        <h3 class="text-center">This is the demo project with Socket.io</h4>
+        <h3 class="text-center">A Real Time Web App with Socket.io</h4>
         <ol id="messages" class="well">
-          <h4>Current Messages:</h4>
+          <h4 id="message-stream">Current Messages:</h4>
         </ol>
         <form id="message-form">
           <div class="form-group">
@@ -31,10 +31,41 @@
       </div>
     </div>
   </div>
+    <script id="message-template" type="text/template">
+      <li>
+        <div>
+          <h4>{{from}} - <span>
+                          <small><em>{{createdAt}}</em>
+                          </small>
+                        </span>
+          </h4>
+        </div>
+        <div>
+          <p>{{text}}</p>
+        </div>
+      </li>
+    </script>
+    <script id="location-message-template" type="text/template">
+      <li>
+        <div>
+          <h4>{{from}} - <span>
+                          <small><em>{{createdAt}}</em>
+                          </small>
+                        </span>
+          </h4>
+        </div>
+        <div>
+          <p>
+            <a href="{{url}}" target="_blank"><i class="glyphicon glyphicon-globe"></i> - My current location</a>
+          </p>
+        </div>
+      </li>
+    </script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/libs/jquery-3.1.1.min.js"></script>
     <script src="/js/index.js"></script>
     <script src-"js/libs/bootstrap.min.js"></script>
     <script src="js/libs/moment.js"></script>
+    <script src="js/libs/mustache.js"></script>
   </body>
 </html>

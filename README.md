@@ -10,3 +10,4 @@
 3. Sockets.io
 4. Geolocation feature
 5. Bootstrap for CSS
+6. Mustachejs for HTML templates

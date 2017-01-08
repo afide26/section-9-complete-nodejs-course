@@ -6,6 +6,9 @@ div.col-md-2{
   height: 100vh;
 }
 
+ol{
+  list-style-type: none;
+}
 .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -18,11 +21,11 @@ div.col-md-2{
   flex-direction: column;
 }
 
-.well h4{
-  border-bottom: 1px #286090 solid;
-}
-.well li{
-  margin-left: 15px;
+.well #message-stream{
+ border-bottom: 1px solid #31B0D5;
+ text-transform: uppercase;
+ letter-spacing: 1.2px;
+ line-height: 1.5em;
 }
 
 .col-md-2{
