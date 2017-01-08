@@ -1,0 +1,14 @@
+#message-form label,
+#message-form button,
+#send-location{
+  display:block;
+  text-align:center;
+  line-height: 120%;
+  font-size: .9em;
+  text-transform: uppercase;
+}
+
+#message-form button,
+#send-location{
+  border-radius: 30px;
+}
