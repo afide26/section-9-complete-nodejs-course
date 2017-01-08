@@ -1,4 +1,4 @@
-var messageGenerator = (from, text)=>{
+var messageGenerator        = (from, text)=>{
   return{
     from: from,
     text:text,
@@ -6,4 +6,11 @@ var messageGenerator = (from, text)=>{
   }
 };
 
-module.exports = {messageGenerator};
+var generateLocationMessage = (from, latitude, longitude)=>{
+  return{
+    from: from,
+    url:`https://www.google.com/maps?q=${latitude},${longitude}`,
+    createdAt: new Date().getTime()
+  }
+};
+module.exports = {messageGenerator, generateLocationMessage};

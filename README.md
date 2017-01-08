@@ -8,3 +8,5 @@
 1. Express
 2. Use of path.join()
 3. Sockets.io
+4. Geolocation feature
+5. Bootstrap for CSS
