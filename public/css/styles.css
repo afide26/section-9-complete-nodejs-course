@@ -18,6 +18,13 @@ div.col-md-2{
   flex-direction: column;
 }
 
+.well h4{
+  border-bottom: 1px #286090 solid;
+}
+.well li{
+  margin-left: 15px;
+}
+
 .col-md-2{
   color: #fefefe;
   text-transform: uppercase;
