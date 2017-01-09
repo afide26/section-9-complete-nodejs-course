@@ -2,8 +2,14 @@
   box-sizing: border-box;
 }
 
-div.col-md-2{
+
+div.col-md-10{
   height: 100vh;
+}
+
+#messages{
+  overflow-y: auto;
+  height: 67vh;
 }
 
 ol{
@@ -36,12 +42,13 @@ ol{
 
 #send-location,
 #send-message{
-  display: inline-block;
+  display: block;
   width: 15%;
 }
 
 input[name="message"]{
   width: 68%;
+  clear:both;
 }
 
 #message-form{
@@ -49,13 +56,13 @@ input[name="message"]{
   margin: 0 auto;
   background: #fefefe;
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
 }
 
 #send-location{
   width: 15%;
   position: absolute;
-  bottom: 35px;
+  bottom: 15px ;
   margin-left: 82%;
 }
 
@@ -94,14 +101,14 @@ input[name="message"]{
 
 
   #send-message{
-    display: block;
+    display: inline-block;
     width: 250px;
     margin: 25px 15px;
     text-align: center;
   }
 
   #send-location{
-    display: block;
+    display: inline-block;
     width: 250px;
     margin:10px 15px;
   }
