@@ -40,9 +40,12 @@ ol{
   letter-spacing: 1.2px;
 }
 
-#send-location,
+.responsive-width{
+  font-size: 3vw;
+}
+
 #send-message{
-  display: block;
+  display: inline-block;
   width: 15%;
 }
 
@@ -60,6 +63,7 @@ input[name="message"]{
 }
 
 #send-location{
+  display:inline-block;
   width: 15%;
   position: absolute;
   bottom: 15px ;
@@ -101,16 +105,20 @@ input[name="message"]{
 
 
   #send-message{
-    display: inline-block;
-    width: 250px;
-    margin: 25px 15px;
+    /*display: inline-block;*/
+    width: 40%;
+    margin: 25px 10px 25px 15px;
     text-align: center;
   }
 
   #send-location{
-    display: inline-block;
-    width: 250px;
-    margin:10px 15px;
+    /*display: block;*/
+    position: absolute;
+    bottom: 50px;
+    left: 130px;
+    float:left;
+    width: 35%;
+    margin:10px 45px;
   }
 
   input[name="message"]{
@@ -125,4 +133,7 @@ input[name="message"]{
     display:block;
     position: relative;
   }
-}
+
+  .responsive-width{
+    font-size: 3vw;
+  }
