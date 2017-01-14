@@ -31,9 +31,7 @@ div.col-md-10{
   height: 67vh;
 }
 
-ol{
-  list-style-type: none;
-}
+
 .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -94,6 +92,33 @@ input[name="message"]{
   width: 100%;
   margin: 0 auto;
   color: #00134d;
+}
+
+#users>ol{
+  list-style-type: none;
+  counter-reset: li;
+}
+
+#users>ol>li{
+  background: #fefefe;
+  color: black;
+  padding: 0 5px;
+  text-align:left;
+  margin-bottom: 3px;
+}
+
+
+#users>ol>li::before{
+  content: counter(li);
+  color: red;
+  display: inline-block;
+  font-weight:bold;
+  background: #fce;
+  width: 1em;
+  padding: 0 3px;
+  margin-left: -1em;
+  margin-right: 5px;
+  counter-increment:li;
 }
 
 #left-panel,
@@ -163,6 +188,9 @@ input[name="message"]{
     position: relative;
   }
 
+  #users{
+    display: none;
+  }
   .responsive-width{
     font-size: 3vw;
   }
