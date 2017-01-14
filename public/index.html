@@ -2,71 +2,32 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Chat App</title>
+    <title>Chat | Chat App</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body>
-  <div class="container-fluid">
-    <div class="row row-eq-height">
-      <div class="col-md-2 " id="left-panel">
-        <h3>People</h3>
-      </div>
-      <div class="col-md-10">
-        <h1 class="text-center">Welcome to the Node Chat App</h1>
-        <h3 class="text-center">A Real Time Web App with Socket.io</h4>
-        <ol id="messages">
-          <h4 id="message-stream">Current Messages:</h4>
-        </ol>
-        <form id="message-form" class="fixed-bottom">
-          <div class="form-group">
-            <label for="message"><h4>What's Your Message?</h4></label>
-            <br/>
-            <input type="text" name="message" autofocus autocomplete="off"placeholder="Type here...." type="text" ></input>
-            <button id="send-message" type="submit" class="responsive-width btn btn-sm btn-info">Send</button>
+  <body id="chat-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <form class="form" action="/chat.html" >
+            <h3>Chat App</h3>
+            <div class="form-group">
+              <label for="username">Display name</label>
+              <input type="text" name="username" class="form-control" placeholder="Your name here" />
             </div>
-        </form>
-            <button id="send-location" type="submit" class="btn responsive-width btn-sm btn-primary">Send Location</button>
+            <div class="form-group">
+              <label for="roomname">Room Name:</label>
+              <input type="text" name="roomname" class="form-control" placeholder="Join a chat room" />
+            </div>
+            <div class="action">
+              <button type="submit" class="btn btn-block btn-primary">Join</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-    <script id="message-template" type="text/template">
-      <li>
-        <div>
-          <h4>{{from}} - <span>
-                          <small><em>{{createdAt}}</em>
-                          </small>
-                        </span>
-          </h4>
-        </div>
-        <div>
-          <p>{{text}}</p>
-        </div>
-      </li>
-    </script>
-    <script id="location-message-template" type="text/template">
-      <li>
-        <div>
-          <h4>{{from}} - <span>
-                          <small><em>{{createdAt}}</em>
-                          </small>
-                        </span>
-          </h4>
-        </div>
-        <div>
-          <p>
-            <a href="{{url}}" target="_blank"><i class="glyphicon glyphicon-globe"></i> - My current location</a>
-          </p>
-        </div>
-      </li>
-    </script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="js/libs/jquery-3.1.1.min.js"></script>
-    <script src="/js/index.js"></script>
-    <script src-"js/libs/bootstrap.min.js"></script>
-    <script src="js/libs/moment.js"></script>
-    <script src="js/libs/mustache.js"></script>
   </body>
 </html>
