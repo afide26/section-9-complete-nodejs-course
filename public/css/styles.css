@@ -94,6 +94,13 @@ input[name="message"]{
   color: #00134d;
 }
 
+#messages >li:first-child{
+  color: black;
+  border-bottom: 2px solid black;
+}
+ol{
+  list-style-type: none;
+}
 #users>ol{
   list-style-type: none;
   counter-reset: li;
@@ -110,10 +117,10 @@ input[name="message"]{
 
 #users>ol>li::before{
   content: counter(li);
-  color: red;
+  color: #ffeeff;
   display: inline-block;
   font-weight:bold;
-  background: #fce;
+  background: #267bc6;
   width: 1em;
   padding: 0 3px;
   margin-left: -1em;
